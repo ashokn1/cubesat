@@ -20,7 +20,8 @@ for bdaddr in nearby_devices:
     break  
     
 print ("searching for the object push service...")
-services = lightblue.findservices(target_address) for service in services:  
+services = lightblue.findservices(target_address)
+for service in services:  
   if service[2] == "OBEX Object Push":  
     obex_port = service[1]       
     print ("OK, service '", service[2], "' is in port", service[1], "!") 
